@@ -29,7 +29,7 @@
     @apply text-xs font-semibold uppercase tracking-[0.2em] text-brand-400;
   }
   .section {
-    @apply py-20 lg:py-24;
+    @apply py-14 lg:py-16;
   }
   .card {
     @apply rounded-xl border border-ink-700 bg-ink-800/60 p-6;

@@ -46,7 +46,7 @@ export default function HomePage() {
               'radial-gradient(circle at 75% 30%, rgba(251,191,36,0.25), transparent 55%), radial-gradient(circle at 20% 80%, rgba(37,99,235,0.18), transparent 50%)',
           }}
         />
-        <div className="container-page relative py-24 lg:py-32 grid gap-12 lg:grid-cols-2 items-center">
+        <div className="container-page relative py-12 lg:py-16 grid gap-12 lg:grid-cols-2 items-center">
           <div>
             <p className="eyebrow">{site.tagline}</p>
             <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] text-ink-50">
