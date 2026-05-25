@@ -50,21 +50,28 @@ export default function HomePage() {
           <div>
             <p className="eyebrow">{site.tagline}</p>
             <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] text-ink-50">
-              Empower your team with <span className="text-brand-400">AI agents</span>
-              <span className="block mt-2 text-3xl sm:text-4xl lg:text-5xl text-ink-100/90">
-                Tailored to your business
-              </span>
+              <span className="text-brand-400">Empower your team</span> with AI agents
             </h1>
+            <p className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1] text-ink-50">
+              Tailored to your business
+            </p>
             <p className="mt-6 text-lg text-ink-200 max-w-xl">
-              We develop intelligent, scalable, and customized AI solutions that automate your work,
-              ensure data privacy, and help you stay one step ahead in a rapidly changing world.
+              We develop intelligent, scalable, and customized AI solutions that{' '}
+              <span className="text-brand-400 font-medium">automate your work, ensure data privacy</span>
+              , and help you stay one step ahead in a rapidly changing world.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="#services" className="btn-primary">
-                Discover Our Services <ArrowRight className="ml-2 h-4 w-4" />
+              <Link
+                href="#contact"
+                className="inline-flex items-center justify-center rounded-full bg-brand-400 px-7 py-3 text-sm font-semibold text-ink-900 shadow-sm hover:bg-brand-300 transition-colors"
+              >
+                Contact Us
               </Link>
-              <Link href="#contact" className="btn-secondary">
-                Get in touch
+              <Link
+                href="#services"
+                className="inline-flex items-center justify-center rounded-full border-2 border-brand-400 bg-transparent px-7 py-3 text-sm font-semibold text-brand-400 hover:bg-brand-400/10 transition-colors"
+              >
+                Discover Our Services
               </Link>
             </div>
           </div>
