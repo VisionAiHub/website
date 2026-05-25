@@ -14,7 +14,6 @@ import {
   BadgeCheck,
   LineChart,
   Rocket,
-  Cpu,
   Database,
   Code2,
   Activity,
@@ -50,9 +49,11 @@ export default function HomePage() {
         <div className="container-page relative py-24 lg:py-32 grid gap-12 lg:grid-cols-2 items-center">
           <div>
             <p className="eyebrow">{site.tagline}</p>
-            <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-ink-50">
-              Empower your team with{' '}
-              <span className="text-brand-400">AI agents</span> tailored to your business
+            <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] text-ink-50">
+              Empower your team with <span className="text-brand-400">AI agents</span>
+              <span className="block mt-2 text-3xl sm:text-4xl lg:text-5xl text-ink-100/90">
+                Tailored to your business
+              </span>
             </h1>
             <p className="mt-6 text-lg text-ink-200 max-w-xl">
               We develop intelligent, scalable, and customized AI solutions that automate your work,
@@ -69,16 +70,14 @@ export default function HomePage() {
           </div>
 
           <div className="relative hidden lg:flex justify-center items-center">
-            <div className="relative h-[420px] w-[420px]">
-              <div className="absolute inset-0 rounded-full border border-brand-400/30 animate-pulse" />
-              <div className="absolute inset-6 rounded-full border border-brand-400/20" />
-              <div className="absolute inset-14 rounded-full border border-brand-400/10" />
-              <div className="absolute inset-0 grid place-items-center">
-                <div className="grid h-44 w-44 place-items-center rounded-3xl bg-gradient-to-br from-brand-400 to-brand-600 shadow-2xl shadow-brand-400/20">
-                  <Cpu className="h-20 w-20 text-ink-900" strokeWidth={1.4} />
-                </div>
-              </div>
-            </div>
+            <Image
+              src="/brand/hero.png"
+              alt="AI agent illustration"
+              width={560}
+              height={560}
+              priority
+              className="drop-shadow-[0_0_60px_rgba(251,191,36,0.15)]"
+            />
           </div>
         </div>
       </section>

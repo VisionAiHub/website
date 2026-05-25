@@ -8,6 +8,7 @@
   }
   body {
     @apply bg-ink-900 text-ink-100 antialiased;
+    font-synthesis: weight style;
   }
   ::selection {
     @apply bg-brand-400 text-ink-900;
@@ -16,7 +17,7 @@
 
 @layer components {
   .container-page {
-    @apply mx-auto w-full max-w-container px-6 lg:px-8;
+    @apply mx-auto w-full max-w-container px-6 lg:px-12 xl:px-20;
   }
   .btn-primary {
     @apply inline-flex items-center justify-center rounded-md bg-brand-400 px-6 py-3 text-sm font-semibold text-ink-900 shadow-sm hover:bg-brand-300 transition-colors;

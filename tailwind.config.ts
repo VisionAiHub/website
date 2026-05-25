@@ -37,10 +37,10 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['Questrial', 'Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+        sans: ['var(--font-questrial)', 'Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
       },
       maxWidth: {
-        container: '1200px',
+        container: '1440px',
       },
     },
   },

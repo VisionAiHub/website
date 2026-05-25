@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
@@ -17,7 +18,14 @@ export function Header() {
     <header className="sticky top-0 z-40 w-full border-b border-ink-800 bg-ink-900/85 backdrop-blur">
       <div className="container-page flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
-          <span className="grid h-9 w-9 place-items-center rounded-md bg-brand-400 text-ink-900 font-bold">V</span>
+          <Image
+            src="/brand/logo.png"
+            alt="VisionAiHub"
+            width={44}
+            height={44}
+            priority
+            className="h-10 w-10 object-contain"
+          />
           <span className="leading-tight">
             <span className="block text-base font-bold text-ink-50">{site.name}</span>
             <span className="block text-[10px] uppercase tracking-[0.2em] text-brand-400">
