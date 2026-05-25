@@ -40,7 +40,7 @@ const config: Config = {
         sans: ['var(--font-questrial)', 'Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
       },
       maxWidth: {
-        container: '1440px',
+        container: '1720px',
       },
     },
   },
