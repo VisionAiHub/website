@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import { services, industries, whyChoose, offerings, tools, stats } from '@/lib/content';
 import { site } from '@/lib/site';
+import { ContactForm } from '@/components/ContactForm';
 
 const serviceIcons: Record<string, React.ReactNode> = {
   'enterprise-knowledge-assistants': <Bot className="h-6 w-6" />,
@@ -312,50 +313,8 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="mt-12 max-w-2xl mx-auto card">
-            <h3 className="text-lg font-semibold text-ink-50">Send us a message</h3>
-            <p className="mt-1 text-sm text-ink-300">
-              Tell us about your project and we&apos;ll get back to you promptly
-            </p>
-            <form
-              className="mt-6 grid gap-4"
-              action={`mailto:${site.email}`}
-              method="post"
-              encType="text/plain"
-            >
-              <div className="grid gap-4 sm:grid-cols-2">
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  placeholder="Your name"
-                  className="rounded-md border border-ink-700 bg-ink-950 px-4 py-3 text-sm text-ink-100 placeholder:text-ink-400 focus:border-brand-400 focus:outline-none"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  placeholder="Email"
-                  className="rounded-md border border-ink-700 bg-ink-950 px-4 py-3 text-sm text-ink-100 placeholder:text-ink-400 focus:border-brand-400 focus:outline-none"
-                />
-              </div>
-              <input
-                type="text"
-                name="company"
-                placeholder="Company"
-                className="rounded-md border border-ink-700 bg-ink-950 px-4 py-3 text-sm text-ink-100 placeholder:text-ink-400 focus:border-brand-400 focus:outline-none"
-              />
-              <textarea
-                name="message"
-                rows={5}
-                required
-                placeholder="Tell us about your project"
-                className="rounded-md border border-ink-700 bg-ink-950 px-4 py-3 text-sm text-ink-100 placeholder:text-ink-400 focus:border-brand-400 focus:outline-none"
-              />
-              <button type="submit" className="btn-primary mt-2 self-start">
-                Submit
-              </button>
-            </form>
+          <div className="mt-12 max-w-2xl mx-auto">
+            <ContactForm />
           </div>
         </div>
       </section>
