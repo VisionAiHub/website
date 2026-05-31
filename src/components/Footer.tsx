@@ -17,8 +17,10 @@ export function Footer() {
               className="h-12 w-12 object-contain"
             />
             <span className="leading-tight">
-              <span className="block text-xl font-bold text-ink-50">{site.name}</span>
-              <span className="block text-xs uppercase tracking-[0.18em] text-brand-400">
+              <span className="block text-xl font-extrabold tracking-tight text-ink-50">
+                {site.name}
+              </span>
+              <span className="block text-sm font-medium text-ink-200">
                 {site.tagline}
               </span>
             </span>

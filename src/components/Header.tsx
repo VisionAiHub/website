@@ -27,8 +27,10 @@ export function Header() {
             className="h-10 w-10 object-contain"
           />
           <span className="leading-tight">
-            <span className="block text-base font-bold text-ink-50">{site.name}</span>
-            <span className="block text-[10px] uppercase tracking-[0.2em] text-brand-400">
+            <span className="block text-base font-extrabold tracking-tight text-ink-50">
+              {site.name}
+            </span>
+            <span className="block text-[11px] font-medium text-ink-200">
               {site.tagline}
             </span>
           </span>
