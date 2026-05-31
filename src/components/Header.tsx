@@ -16,39 +16,42 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-ink-800 bg-ink-900/85 backdrop-blur">
-      <div className="container-page flex h-16 items-center justify-between">
+      <div className="container-page flex h-24 items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/brand/logo.png"
             alt="VisionAiHub"
-            width={44}
-            height={44}
+            width={72}
+            height={72}
             priority
-            className="h-10 w-10 object-contain"
+            className="h-14 w-14 object-contain"
           />
           <span className="leading-tight">
-            <span className="block text-base font-extrabold tracking-tight text-ink-50">
+            <span className="block text-2xl font-extrabold tracking-tight text-ink-50">
               {site.name}
             </span>
-            <span className="block text-[11px] font-medium text-ink-200">
+            <span className="block text-sm font-medium text-ink-200">
               {site.tagline}
             </span>
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-10">
           {site.nav.map((item) => (
             <Link
               key={item.href}
               href={linkHref(item.href)}
-              className="text-sm font-medium text-ink-100 hover:text-brand-400 transition-colors"
+              className="text-base font-medium text-ink-100 hover:text-brand-400 transition-colors"
             >
               {item.label}
             </Link>
           ))}
         </nav>
 
-        <Link href={onHome ? '#contact' : '/#contact'} className="hidden md:inline-flex btn-primary !py-2 !px-4">
+        <Link
+          href={onHome ? '#contact' : '/#contact'}
+          className="hidden md:inline-flex items-center justify-center rounded-full bg-brand-400 px-6 py-3 text-sm font-semibold text-ink-900 hover:bg-brand-300 transition-colors"
+        >
           Get in touch
         </Link>
 

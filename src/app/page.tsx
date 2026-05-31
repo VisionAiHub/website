@@ -50,10 +50,10 @@ export default function HomePage() {
         <div className="container-page relative py-12 lg:py-16 grid gap-12 lg:grid-cols-2 items-center">
           <div>
             <p className="eyebrow">{site.tagline}</p>
-            <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] text-ink-50">
+            <h1 className="mt-4 text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] text-ink-50">
               <span className="text-brand-400">Empower your team</span> with AI agents
             </h1>
-            <p className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1] text-ink-50">
+            <p className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] text-ink-50">
               Tailored to your business
             </p>
             <p className="mt-6 text-lg text-ink-200 max-w-xl">
