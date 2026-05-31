@@ -20,7 +20,7 @@ export function Footer() {
               <span className="block text-xl font-extrabold tracking-tight text-ink-50">
                 {site.name}
               </span>
-              <span className="block text-sm font-medium text-ink-200">
+              <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-brand-400">
                 {site.tagline}
               </span>
             </span>
