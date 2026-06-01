@@ -27,7 +27,7 @@ export async function Footer() {
                 {site.name}
               </span>
               <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-brand-400">
-                {tSite('tagline')}
+                Innovative AI Solutions
               </span>
             </span>
           </div>

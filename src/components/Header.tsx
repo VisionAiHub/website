@@ -45,7 +45,7 @@ export function Header() {
             <span className="block text-2xl font-extrabold tracking-tight text-ink-50">
               {site.name}
             </span>
-            <span className="block text-sm font-medium text-ink-200">{t('cta')}</span>
+            <span className="block text-sm font-medium text-ink-200">Innovative AI Solutions</span>
           </span>
         </Link>
 

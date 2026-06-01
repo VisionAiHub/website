@@ -93,7 +93,7 @@ export default async function HomePage({
         />
         <div className="container-page relative py-12 lg:py-16 grid gap-12 lg:grid-cols-2 items-center">
           <div>
-            <p className="eyebrow">{tHero('eyebrow')}</p>
+            <p className="eyebrow">Innovative AI Solutions</p>
             <h1 className="mt-4 text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] text-ink-50">
               <span className="text-brand-400">{tHero('titleHighlight')}</span>
               {tHero('titleRest')}
