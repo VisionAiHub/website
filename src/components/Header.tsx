@@ -1,18 +1,33 @@
 'use client';
 
-import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useLocale, useTranslations } from 'next-intl';
+import { Link, usePathname, useRouter } from '@/i18n/navigation';
+import { routing, type Locale } from '@/i18n/routing';
 import { site } from '@/lib/site';
+
+const NAV_KEYS = ['services', 'about', 'offer', 'contact'] as const;
+const NAV_TARGETS: Record<(typeof NAV_KEYS)[number], string> = {
+  services: '/#services',
+  about: '/#about',
+  offer: '/#offer',
+  contact: '/#contact',
+};
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const t = useTranslations('nav');
+  const tLang = useTranslations('languageSwitcher');
+  const locale = useLocale() as Locale;
   const pathname = usePathname();
-  const onHome = pathname === '/';
+  const router = useRouter();
 
-  const linkHref = (href: string) => (onHome || !href.startsWith('#') ? href : `/${href}`);
+  const switchLocale = (next: Locale) => {
+    if (next === locale) return;
+    router.replace(pathname, { locale: next });
+  };
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-ink-800 bg-ink-900/85 backdrop-blur">
@@ -30,30 +45,50 @@ export function Header() {
             <span className="block text-2xl font-extrabold tracking-tight text-ink-50">
               {site.name}
             </span>
-            <span className="block text-sm font-medium text-ink-200">
-              {site.tagline}
-            </span>
+            <span className="block text-sm font-medium text-ink-200">{t('cta')}</span>
           </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-10">
-          {site.nav.map((item) => (
+          {NAV_KEYS.map((key) => (
             <Link
-              key={item.href}
-              href={linkHref(item.href)}
+              key={key}
+              href={NAV_TARGETS[key]}
               className="text-base font-medium text-ink-100 hover:text-brand-400 transition-colors"
             >
-              {item.label}
+              {t(key)}
             </Link>
           ))}
         </nav>
 
-        <Link
-          href={onHome ? '#contact' : '/#contact'}
-          className="hidden md:inline-flex items-center justify-center rounded-full bg-brand-400 px-6 py-3 text-sm font-semibold text-ink-900 hover:bg-brand-300 transition-colors"
-        >
-          Get in touch
-        </Link>
+        <div className="hidden md:flex items-center gap-4">
+          <div
+            className="flex items-center rounded-full border border-ink-700 bg-ink-800/60 p-1"
+            role="group"
+            aria-label={tLang('label')}
+          >
+            {routing.locales.map((l) => (
+              <button
+                key={l}
+                onClick={() => switchLocale(l)}
+                aria-current={l === locale ? 'true' : undefined}
+                className={`rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider transition-colors ${
+                  l === locale
+                    ? 'bg-brand-400 text-ink-900'
+                    : 'text-ink-200 hover:text-brand-400'
+                }`}
+              >
+                {l}
+              </button>
+            ))}
+          </div>
+          <Link
+            href="/#contact"
+            className="inline-flex items-center justify-center rounded-full bg-brand-400 px-6 py-3 text-sm font-semibold text-ink-900 hover:bg-brand-300 transition-colors"
+          >
+            {t('cta')}
+          </Link>
+        </div>
 
         <button
           className="md:hidden p-2 text-ink-100"
@@ -67,22 +102,45 @@ export function Header() {
       {open && (
         <div className="md:hidden border-t border-ink-800 bg-ink-900">
           <nav className="container-page flex flex-col py-4">
-            {site.nav.map((item) => (
+            {NAV_KEYS.map((key) => (
               <Link
-                key={item.href}
-                href={linkHref(item.href)}
+                key={key}
+                href={NAV_TARGETS[key]}
                 onClick={() => setOpen(false)}
                 className="py-2 text-sm font-medium text-ink-100"
               >
-                {item.label}
+                {t(key)}
               </Link>
             ))}
+            <div
+              className="mt-3 flex items-center gap-2 self-start rounded-full border border-ink-700 bg-ink-800/60 p-1"
+              role="group"
+              aria-label={tLang('label')}
+            >
+              {routing.locales.map((l) => (
+                <button
+                  key={l}
+                  onClick={() => {
+                    setOpen(false);
+                    switchLocale(l);
+                  }}
+                  aria-current={l === locale ? 'true' : undefined}
+                  className={`rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider transition-colors ${
+                    l === locale
+                      ? 'bg-brand-400 text-ink-900'
+                      : 'text-ink-200'
+                  }`}
+                >
+                  {l}
+                </button>
+              ))}
+            </div>
             <Link
-              href={onHome ? '#contact' : '/#contact'}
-              className="btn-primary mt-3 !py-2"
+              href="/#contact"
+              className="mt-3 inline-flex items-center justify-center rounded-full bg-brand-400 px-6 py-3 text-sm font-semibold text-ink-900"
               onClick={() => setOpen(false)}
             >
-              Get in touch
+              {t('cta')}
             </Link>
           </nav>
         </div>

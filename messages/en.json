@@ -1,0 +1,349 @@
+{
+  "site": {
+    "tagline": "Innovative AI Solutions",
+    "legalTagline": "Turning AI into Business Value",
+    "description": "Leading AI consulting company specializing in intelligent, scalable solutions that transform businesses and drive innovation across industries."
+  },
+  "nav": {
+    "services": "Our Services",
+    "about": "About Us",
+    "offer": "What We Offer",
+    "contact": "Contact Us",
+    "cta": "Get in touch"
+  },
+  "hero": {
+    "eyebrow": "Innovative AI Solutions",
+    "titleHighlight": "Empower your team",
+    "titleRest": " with AI agents",
+    "subtitle": "Tailored to your business",
+    "bodyBefore": "We develop intelligent, scalable, and customized AI solutions that ",
+    "bodyHighlight": "automate your work, ensure data privacy",
+    "bodyAfter": ", and help you stay one step ahead in a rapidly changing world.",
+    "primaryCta": "Contact Us",
+    "secondaryCta": "Discover Our Services",
+    "robotAlt": "AI agent illustration"
+  },
+  "services": {
+    "eyebrow": "AI solutions that deliver real value to your business",
+    "heading": "Your Trusted Partner for AI Solutions and Business Automation",
+    "items": {
+      "enterprise-knowledge-assistants": {
+        "title": "Enterprise Knowledge Assistants",
+        "summary": "Fast access to company knowledge — for employees and customers."
+      },
+      "information-extraction": {
+        "title": "Intelligent Information Extraction",
+        "summary": "Precise extraction and analysis of critical data from contracts, receipts, and forms."
+      },
+      "agent-automation": {
+        "title": "Agent-Based Business Process Automation",
+        "summary": "End-to-end automation of complex processes through autonomous AI agents."
+      },
+      "multi-modal-ai": {
+        "title": "Multi-Modal AI Integration",
+        "summary": "Linking text, image, speech, and video for holistic AI experiences."
+      },
+      "customer-support": {
+        "title": "AI-Powered Customer Support",
+        "summary": "Personalized 24/7 support with empathetic chat and voice bots."
+      },
+      "privacy-compliant": {
+        "title": "Privacy-Compliant AI Solutions",
+        "summary": "GDPR-compliant AI applications with local hosting or private cloud options."
+      }
+    }
+  },
+  "ribbon": {
+    "eyebrow": "Not sure which fits?",
+    "titleStart": "Curious which of these will move the needle for ",
+    "titleHighlight": "your business?",
+    "body": "Book a free 30-minute call. No slides — just a conversation about your highest-ROI AI opportunities.",
+    "primaryCta": "Get in touch",
+    "secondaryCta": "See what we offer"
+  },
+  "about": {
+    "eyebrow": "About",
+    "heading": "About",
+    "headingHighlight": "VisionAiHub",
+    "p1": "VisionAiHub is a leading AI consulting company with over seven years of experience in successfully developing and implementing scalable AI solutions. Our goal is to give businesses efficient and practical access to the opportunities of modern AI – especially intelligent assistant systems.",
+    "p2": "We focus not on technologies, but on measurable results and real business value. Over the past seven years, we've helped numerous companies – from SMEs to global corporations – integrate AI in meaningful ways and create sustainable value.",
+    "stats": {
+      "years": {
+        "value": "7+",
+        "label": "Years Experience"
+      },
+      "projects": {
+        "value": "30+",
+        "label": "projects implemented"
+      }
+    },
+    "mission": {
+      "eyebrow": "Our Mission",
+      "title": "Empower teams with smart AI assistants and elevate your processes to the next level.",
+      "body": "We believe that AI should be accessible, practical, and transformative for every business, regardless of size or industry."
+    }
+  },
+  "why": {
+    "heading": "Why Choose",
+    "headingHighlight": "VisionAiHub?",
+    "items": {
+      "tailored": {
+        "title": "Tailored AI Solutions",
+        "description": "Custom AI systems designed for your specific business requirements"
+      },
+      "integration": {
+        "title": "Seamless System Integration",
+        "description": "Effortless integration with existing IT infrastructure and workflows"
+      },
+      "expertise": {
+        "title": "Technical & Strategic Know-How",
+        "description": "Expert team with deep expertise in AI and business strategy"
+      },
+      "compliance": {
+        "title": "GDPR Compliance & EU AI Act Ready",
+        "description": "Full compliance with European data protection and AI regulations"
+      },
+      "kpis": {
+        "title": "Transparent KPIs & Results",
+        "description": "Measurable success through clear metrics and regular reporting"
+      },
+      "agile": {
+        "title": "Agile Execution & Fast Development",
+        "description": "Efficient project delivery with flexible development methodologies"
+      }
+    }
+  },
+  "industries": {
+    "heading": "Industries We've Served",
+    "items": {
+      "it": "IT",
+      "legal-compliance": "Legal & Compliance",
+      "finance": "Finance",
+      "marketing": "Marketing & Communications",
+      "logistics": "Logistics",
+      "manufacturing": "Manufacturing",
+      "ecommerce": "E-Commerce"
+    }
+  },
+  "tools": {
+    "heading": "Tools We Use"
+  },
+  "offer": {
+    "eyebrow": "End-to-End AI Solution Development",
+    "heading": "What We",
+    "headingHighlight": "Offer",
+    "items": {
+      "strategy": {
+        "title": "Strategic Consulting",
+        "list": [
+          "Strategic AI consulting",
+          "Creation of custom AI roadmaps",
+          "Selection of suitable technologies"
+        ]
+      },
+      "data": {
+        "title": "Data & Model Infrastructure",
+        "list": [
+          "Data engineering",
+          "Model selection",
+          "Prompt engineering",
+          "Knowledge ingestion",
+          "Agent architecture"
+        ]
+      },
+      "dev": {
+        "title": "Development & Integration",
+        "list": [
+          "On-premises deployment",
+          "Private/public cloud infrastructure",
+          "Frontend and backend development",
+          "Mobile app development",
+          "DevOps & infrastructure"
+        ]
+      },
+      "ops": {
+        "title": "Operations & Support",
+        "list": [
+          "Monitoring & logging",
+          "Feedback loops",
+          "Updates & maintenance"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "heading": "Get In",
+    "headingHighlight": "Touch",
+    "subtitle": "Ready to transform your business with AI? Let's talk.",
+    "formTitle": "Send us a message",
+    "formSubtitle": "Tell us about your project and we'll get back to you promptly",
+    "fields": {
+      "name": "Your name",
+      "email": "Email",
+      "company": "Company",
+      "message": "Tell us about your project"
+    },
+    "submit": "Submit",
+    "submitting": "Sending…",
+    "successTitle": "Thanks — message received.",
+    "successBody": "We'll get back to you at the email you provided, usually within one business day.",
+    "errors": {
+      "missingFields": "Please fill in name, email, and message.",
+      "invalidEmail": "That email address looks invalid.",
+      "tooLong": "Message is too long (max 5000 characters).",
+      "notConfigured": "Server is not configured to send email yet.",
+      "sendFailed": "Sending failed. Please email us directly."
+    },
+    "email": {
+      "subject": "New inquiry from {name}",
+      "subjectWithCompany": "New inquiry from {name} ({company})",
+      "heading": "New inquiry from visionaihub.com",
+      "name": "Name",
+      "emailLabel": "Email",
+      "company": "Company"
+    }
+  },
+  "floatingCta": "Get in touch",
+  "blog": {
+    "title": "Blog",
+    "description": "Insights from VisionAiHub on Generative AI, agents, and applied ML.",
+    "eyebrow": "Blog",
+    "heading": "Insights & writing",
+    "subtitle": "Practical perspectives on shipping AI in production.",
+    "empty": "No posts yet — check back soon."
+  },
+  "footer": {
+    "aboutHeading": "About Us",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "legal": "Legal Notice",
+    "linkedin": "LinkedIn"
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "de": "Deutsch",
+    "en": "English"
+  },
+  "notFound": {
+    "eyebrow": "404",
+    "title": "Page not found",
+    "body": "The page you're looking for doesn't exist or has been moved.",
+    "back": "Back to home"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "Responsible under the General Data Protection Regulation (GDPR) and other national data protection laws of member states as well as other data protection regulations is:",
+    "controller": {
+      "name": "VisionAiHub GmbH",
+      "address": "Mergenthalerallee 73-75, 65760 Eschborn",
+      "managingDirector": "Represented by the Managing Director: Yash Shah",
+      "registry": "Registered: Amtsgericht Frankfurt am Main, HRB 141831",
+      "vat": "VAT ID: DE460919226",
+      "phone": "Phone: +49-17687991987",
+      "emailLabel": "Email:"
+    },
+    "sections": {
+      "website": {
+        "heading": "a) When Visiting the Website",
+        "intro": "When you visit my website, the browser used on your device automatically sends information to the server of my website. This information is temporarily stored in a so-called log file. The following information is collected without your intervention and stored until automated deletion:",
+        "items": [
+          "IP address of the requesting computer,",
+          "Date and time of access,",
+          "Name and URL of the retrieved file,",
+          "Website from which access is made (referrer URL),",
+          "Browser used and, if applicable, the operating system of your computer, and the name of your access provider."
+        ],
+        "purposeLabel": "Purpose:",
+        "purpose": "These data are collected for the purpose of ensuring a smooth connection setup of the website, ensuring comfortable use of our website, evaluating system security and stability, and for other administrative purposes."
+      },
+      "form": {
+        "heading": "b) When Using a Contact Form",
+        "intro": "If you use a contact form to reach out to me, I collect the following personal data:",
+        "items": [
+          "Name, email address, and other contact details"
+        ],
+        "purposeLabel": "Purpose:",
+        "purpose": "This data collection is necessary to answer your questions and handle your inquiries."
+      },
+      "cookies": {
+        "heading": "c) Cookies",
+        "intro": "This website may use cookies. Cookies are small files that are automatically created by your browser and stored on your device (laptop, tablet, smartphone, etc.) when you visit our site. They do not damage your device and do not contain viruses, trojans, or other malware.",
+        "purposeLabel": "Purpose:",
+        "purpose": "The use of cookies serves to make the use of my services more pleasant for you. Some cookies are necessary to run basic website functions, while others may be used for statistical or marketing purposes.",
+        "analyticsLabel": "Google Analytics:",
+        "analytics": "This website may use Google Analytics, a web analysis service of Google Inc. Google Analytics uses cookies. You can find more details in Google's Privacy Policy."
+      },
+      "sharing": {
+        "heading": "Data Sharing",
+        "intro": "Your personal data will not be transferred to third parties for purposes other than those listed above, unless:",
+        "items": [
+          "You have given your explicit consent,",
+          "The transfer is necessary for the fulfillment of a contract,",
+          "The transfer is legally required,",
+          "The transfer is necessary for asserting, exercising, or defending legal claims and there is no reason to assume that you have an overriding interest in not disclosing your data."
+        ]
+      },
+      "rights": {
+        "heading": "Your Rights",
+        "intro": "Under the GDPR, you have the following rights regarding your personal data:",
+        "items": [
+          { "label": "Right to access:", "body": "Obtain confirmation of whether your data is being processed and, if so, receive further details." },
+          { "label": "Right to correction:", "body": "Request the correction of incorrect or incomplete personal data." },
+          { "label": "Right to deletion:", "body": "Demand the deletion of your personal data, except when processing is required by law." },
+          { "label": "Right to restrict processing:", "body": "Request the limitation of processing if you contest the accuracy of the data." },
+          { "label": "Right to data portability:", "body": "Receive the personal data that you provided in a structured, commonly used, and machine-readable format." },
+          { "label": "Right to withdraw consent:", "body": "Withdraw your consent at any time." }
+        ],
+        "complaint": "If you believe that the processing of your data violates data protection law, you have the right to lodge a complaint with a supervisory authority."
+      },
+      "security": {
+        "heading": "Data Security",
+        "body": "I use appropriate technical and organizational security measures to protect your data from accidental or intentional manipulation, partial or complete loss, destruction, or unauthorized access by third parties. My security measures are continuously improved in line with technological developments."
+      },
+      "updates": {
+        "heading": "Updates to this Policy",
+        "body": "I may update this Privacy Policy to reflect changes in legal requirements or changes to my services. The latest version is available on this website."
+      }
+    }
+  },
+  "impressum": {
+    "title": "Impressum",
+    "intro": "Service provider within the meaning of § 5 TMG:",
+    "company": {
+      "name": "VisionAiHub GmbH",
+      "street": "Mergenthalerallee 73-75",
+      "city": "65760 Eschborn",
+      "country": "Germany"
+    },
+    "contact": {
+      "heading": "Contact",
+      "phone": "Phone: +49-17687991987",
+      "emailLabel": "Email:",
+      "websiteLabel": "Website:"
+    },
+    "representative": {
+      "heading": "Authorized Managing Director",
+      "name": "Yash Shah"
+    },
+    "registry": {
+      "heading": "Registry Entry",
+      "registered": "Registered in the commercial register",
+      "court": "Registry court: Amtsgericht Frankfurt am Main",
+      "number": "Registration number: HRB 141831"
+    },
+    "vat": {
+      "heading": "VAT ID",
+      "body": "VAT identification number according to § 27a Umsatzsteuergesetz: DE460919226"
+    },
+    "responsible": {
+      "heading": "Responsible for content according to § 55 (2) RStV",
+      "name": "Yash Shah",
+      "address": "Mergenthalerallee 73-75, 65760 Eschborn"
+    }
+  },
+  "metadata": {
+    "title": "VisionAiHub — Innovative AI Solutions",
+    "description": "Leading AI consulting company specializing in intelligent, scalable solutions that transform businesses and drive innovation across industries.",
+    "ogTitle": "VisionAiHub — Innovative AI Solutions"
+  }
+}

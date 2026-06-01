@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Image from 'next/image';
 import {
   ArrowRight,
@@ -18,9 +17,19 @@ import {
   Code2,
   Activity,
 } from 'lucide-react';
-import { services, industries, whyChoose, offerings, tools, stats } from '@/lib/content';
-import { site } from '@/lib/site';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import { ContactForm } from '@/components/ContactForm';
+import { routing, type Locale } from '@/i18n/routing';
+
+const SERVICE_SLUGS = [
+  'enterprise-knowledge-assistants',
+  'information-extraction',
+  'agent-automation',
+  'multi-modal-ai',
+  'customer-support',
+  'privacy-compliant',
+] as const;
 
 const serviceIcons: Record<string, React.ReactNode> = {
   'enterprise-knowledge-assistants': <Bot className="h-6 w-6" />,
@@ -31,11 +40,46 @@ const serviceIcons: Record<string, React.ReactNode> = {
   'privacy-compliant': <ShieldCheck className="h-6 w-6" />,
 };
 
+const WHY_KEYS = ['tailored', 'integration', 'expertise', 'compliance', 'kpis', 'agile'] as const;
 const whyIcons = [Wrench, Zap, Brain, BadgeCheck, LineChart, Rocket];
 
+const INDUSTRY_SLUGS = [
+  'it',
+  'legal-compliance',
+  'finance',
+  'marketing',
+  'logistics',
+  'manufacturing',
+  'ecommerce',
+] as const;
+
+const TOOLS = ['OpenAI', 'Gemini', 'LLaMA', 'Anthropic', 'Mistral', 'Hugging Face'];
+
+const OFFER_KEYS = ['strategy', 'data', 'dev', 'ops'] as const;
 const offeringIcons = [Brain, Database, Code2, Activity];
 
-export default function HomePage() {
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale as Locale);
+
+  const tHero = await getTranslations('hero');
+  const tServices = await getTranslations('services');
+  const tRibbon = await getTranslations('ribbon');
+  const tAbout = await getTranslations('about');
+  const tWhy = await getTranslations('why');
+  const tIndustries = await getTranslations('industries');
+  const tTools = await getTranslations('tools');
+  const tOffer = await getTranslations('offer');
+  const tContact = await getTranslations('contact');
+
   return (
     <>
       {/* Hero */}
@@ -49,30 +93,31 @@ export default function HomePage() {
         />
         <div className="container-page relative py-12 lg:py-16 grid gap-12 lg:grid-cols-2 items-center">
           <div>
-            <p className="eyebrow">{site.tagline}</p>
+            <p className="eyebrow">{tHero('eyebrow')}</p>
             <h1 className="mt-4 text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] text-ink-50">
-              <span className="text-brand-400">Empower your team</span> with AI agents
+              <span className="text-brand-400">{tHero('titleHighlight')}</span>
+              {tHero('titleRest')}
             </h1>
             <p className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] text-ink-50">
-              Tailored to your business
+              {tHero('subtitle')}
             </p>
             <p className="mt-6 text-lg text-ink-200 max-w-xl">
-              We develop intelligent, scalable, and customized AI solutions that{' '}
-              <span className="text-brand-400 font-medium">automate your work, ensure data privacy</span>
-              , and help you stay one step ahead in a rapidly changing world.
+              {tHero('bodyBefore')}
+              <span className="text-brand-400 font-medium">{tHero('bodyHighlight')}</span>
+              {tHero('bodyAfter')}
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="#contact"
+                href="/#contact"
                 className="inline-flex items-center justify-center rounded-full bg-brand-400 px-7 py-3 text-sm font-semibold text-ink-900 shadow-sm hover:bg-brand-300 transition-colors"
               >
-                Contact Us
+                {tHero('primaryCta')}
               </Link>
               <Link
-                href="#services"
+                href="/#services"
                 className="inline-flex items-center justify-center rounded-full border-2 border-brand-400 bg-transparent px-7 py-3 text-sm font-semibold text-brand-400 hover:bg-brand-400/10 transition-colors"
               >
-                Discover Our Services
+                {tHero('secondaryCta')}
               </Link>
             </div>
           </div>
@@ -80,7 +125,7 @@ export default function HomePage() {
           <div className="relative hidden lg:flex justify-center items-center">
             <Image
               src="/brand/hero.png"
-              alt="AI agent illustration"
+              alt={tHero('robotAlt')}
               width={560}
               height={560}
               priority
@@ -94,33 +139,37 @@ export default function HomePage() {
       <section id="services" className="section bg-ink-900 scroll-mt-20">
         <div className="container-page">
           <div className="text-center max-w-3xl mx-auto">
-            <p className="eyebrow">AI solutions that deliver real value to your business</p>
+            <p className="eyebrow">{tServices('eyebrow')}</p>
             <h2 className="mt-4 text-3xl lg:text-4xl font-bold text-ink-50">
-              Your Trusted Partner for AI Solutions and Business Automation
+              {tServices('heading')}
             </h2>
           </div>
 
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((s) => (
+            {SERVICE_SLUGS.map((slug) => (
               <div
-                key={s.slug}
+                key={slug}
                 className="group overflow-hidden rounded-xl border border-ink-700 bg-ink-800/60 hover:border-brand-400/60 hover:bg-ink-800 transition-all"
               >
                 <div className="relative aspect-[2/1] overflow-hidden">
                   <Image
-                    src={`/services/${s.slug}.jpg`}
-                    alt={s.title}
+                    src={`/services/${slug}.jpg`}
+                    alt={tServices(`items.${slug}.title`)}
                     fill
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-lg bg-brand-400 text-ink-900 shadow-lg">
-                    {serviceIcons[s.slug]}
+                    {serviceIcons[slug]}
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-semibold text-ink-50">{s.title}</h3>
-                  <p className="mt-2 text-sm text-ink-300 leading-relaxed">{s.summary}</p>
+                  <h3 className="text-lg font-semibold text-ink-50">
+                    {tServices(`items.${slug}.title`)}
+                  </h3>
+                  <p className="mt-2 text-sm text-ink-300 leading-relaxed">
+                    {tServices(`items.${slug}.summary`)}
+                  </p>
                 </div>
               </div>
             ))}
@@ -141,22 +190,19 @@ export default function HomePage() {
             />
             <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
               <div className="max-w-xl">
-                <p className="eyebrow">Not sure which fits?</p>
+                <p className="eyebrow">{tRibbon('eyebrow')}</p>
                 <h3 className="mt-3 text-2xl sm:text-3xl font-bold text-ink-50">
-                  Curious which of these will move the needle for{' '}
-                  <span className="text-brand-400">your business?</span>
+                  {tRibbon('titleStart')}
+                  <span className="text-brand-400">{tRibbon('titleHighlight')}</span>
                 </h3>
-                <p className="mt-3 text-ink-300">
-                  Book a free 30-minute call. No slides — just a conversation about your highest-ROI
-                  AI opportunities.
-                </p>
+                <p className="mt-3 text-ink-300">{tRibbon('body')}</p>
               </div>
               <div className="flex flex-wrap gap-3 lg:flex-nowrap lg:flex-shrink-0">
-                <Link href="#contact" className="btn-primary">
-                  Get in touch <ArrowRight className="ml-2 h-4 w-4" />
+                <Link href="/#contact" className="btn-primary">
+                  {tRibbon('primaryCta')} <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-                <Link href="#offer" className="btn-secondary">
-                  See what we offer
+                <Link href="/#offer" className="btn-secondary">
+                  {tRibbon('secondaryCta')}
                 </Link>
               </div>
             </div>
@@ -168,44 +214,38 @@ export default function HomePage() {
       <section id="about" className="section bg-ink-950 scroll-mt-20">
         <div className="container-page">
           <div className="text-center">
-            <p className="eyebrow">About</p>
+            <p className="eyebrow">{tAbout('eyebrow')}</p>
             <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-ink-50">
-              About <span className="text-brand-400">VisionAiHub</span>
+              {tAbout('heading')} <span className="text-brand-400">{tAbout('headingHighlight')}</span>
             </h2>
           </div>
 
           <div className="mt-12 grid gap-10 lg:grid-cols-2 items-center">
             <div className="space-y-5 text-ink-200 leading-relaxed">
-              <p>
-                VisionAiHub is a leading AI consulting company with over seven years of experience
-                in successfully developing and implementing scalable AI solutions. Our goal is to
-                give businesses efficient and practical access to the opportunities of modern AI –
-                especially intelligent assistant systems.
-              </p>
-              <p>
-                We focus not on technologies, but on measurable results and real business value.
-                Over the past seven years, we&apos;ve helped numerous companies – from SMEs to
-                global corporations – integrate AI in meaningful ways and create sustainable value.
-              </p>
+              <p>{tAbout('p1')}</p>
+              <p>{tAbout('p2')}</p>
               <div className="grid grid-cols-2 gap-6 pt-2">
-                {stats.map((s) => (
-                  <div key={s.label} className="card text-center">
-                    <div className="text-4xl font-bold text-brand-400">{s.value}</div>
-                    <div className="mt-2 text-sm text-ink-300">{s.label}</div>
+                <div className="card text-center">
+                  <div className="text-4xl font-bold text-brand-400">
+                    {tAbout('stats.years.value')}
                   </div>
-                ))}
+                  <div className="mt-2 text-sm text-ink-300">{tAbout('stats.years.label')}</div>
+                </div>
+                <div className="card text-center">
+                  <div className="text-4xl font-bold text-brand-400">
+                    {tAbout('stats.projects.value')}
+                  </div>
+                  <div className="mt-2 text-sm text-ink-300">{tAbout('stats.projects.label')}</div>
+                </div>
               </div>
             </div>
 
             <div className="rounded-2xl bg-gradient-to-br from-brand-400 to-brand-500 p-10 text-ink-900 shadow-xl shadow-brand-400/10">
-              <p className="text-xs uppercase tracking-[0.2em] text-ink-900/70">Our Mission</p>
-              <h3 className="mt-3 text-2xl font-bold">
-                Empower teams with smart AI assistants and elevate your processes to the next level.
-              </h3>
-              <p className="mt-4 text-ink-900/80 leading-relaxed">
-                We believe that AI should be accessible, practical, and transformative for every
-                business, regardless of size or industry.
+              <p className="text-xs uppercase tracking-[0.2em] text-ink-900/70">
+                {tAbout('mission.eyebrow')}
               </p>
+              <h3 className="mt-3 text-2xl font-bold">{tAbout('mission.title')}</h3>
+              <p className="mt-4 text-ink-900/80 leading-relaxed">{tAbout('mission.body')}</p>
             </div>
           </div>
         </div>
@@ -216,20 +256,22 @@ export default function HomePage() {
         <div className="container-page">
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold text-ink-50">
-              Why Choose <span className="text-brand-400">VisionAiHub?</span>
+              {tWhy('heading')} <span className="text-brand-400">{tWhy('headingHighlight')}</span>
             </h2>
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {whyChoose.map((w, i) => {
+            {WHY_KEYS.map((key, i) => {
               const Icon = whyIcons[i] ?? BadgeCheck;
               return (
-                <div key={w.title} className="card hover:border-brand-400/60 transition-colors">
+                <div key={key} className="card hover:border-brand-400/60 transition-colors">
                   <div className="grid h-11 w-11 place-items-center rounded-lg bg-brand-400 text-ink-900">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <h3 className="mt-5 font-semibold text-ink-50">{w.title}</h3>
-                  <p className="mt-2 text-sm text-ink-300 leading-relaxed">{w.description}</p>
+                  <h3 className="mt-5 font-semibold text-ink-50">{tWhy(`items.${key}.title`)}</h3>
+                  <p className="mt-2 text-sm text-ink-300 leading-relaxed">
+                    {tWhy(`items.${key}.description`)}
+                  </p>
                 </div>
               );
             })}
@@ -237,14 +279,14 @@ export default function HomePage() {
 
           {/* Industries */}
           <div className="mt-20 text-center">
-            <h3 className="text-xl font-semibold text-ink-50">Industries We&apos;ve Served</h3>
+            <h3 className="text-xl font-semibold text-ink-50">{tIndustries('heading')}</h3>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
-              {industries.map((i) => (
+              {INDUSTRY_SLUGS.map((slug) => (
                 <span
-                  key={i.slug}
+                  key={slug}
                   className="rounded-full border border-ink-700 bg-ink-800 px-5 py-2 text-sm text-ink-100"
                 >
-                  {i.title}
+                  {tIndustries(`items.${slug}`)}
                 </span>
               ))}
             </div>
@@ -252,9 +294,9 @@ export default function HomePage() {
 
           {/* Tools */}
           <div className="mt-16 text-center">
-            <h3 className="text-xl font-semibold text-ink-50">Tools We Use</h3>
+            <h3 className="text-xl font-semibold text-ink-50">{tTools('heading')}</h3>
             <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-              {tools.map((t) => (
+              {TOOLS.map((t) => (
                 <div
                   key={t}
                   className="rounded-lg border border-ink-700 bg-ink-800 px-4 py-4 text-center text-sm font-medium text-ink-100"
@@ -271,23 +313,24 @@ export default function HomePage() {
       <section id="offer" className="section bg-ink-950 scroll-mt-20">
         <div className="container-page">
           <div className="text-center max-w-3xl mx-auto">
-            <p className="eyebrow">End-to-End AI Solution Development</p>
+            <p className="eyebrow">{tOffer('eyebrow')}</p>
             <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-ink-50">
-              What We <span className="text-brand-400">Offer</span>
+              {tOffer('heading')} <span className="text-brand-400">{tOffer('headingHighlight')}</span>
             </h2>
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {offerings.map((o, i) => {
+            {OFFER_KEYS.map((key, i) => {
               const Icon = offeringIcons[i] ?? Wrench;
+              const items = tOffer.raw(`items.${key}.list`) as string[];
               return (
-                <div key={o.title} className="card flex flex-col">
+                <div key={key} className="card flex flex-col">
                   <div className="grid h-11 w-11 place-items-center rounded-lg bg-brand-400 text-ink-900">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <h3 className="mt-5 font-semibold text-ink-50">{o.title}</h3>
+                  <h3 className="mt-5 font-semibold text-ink-50">{tOffer(`items.${key}.title`)}</h3>
                   <ul className="mt-4 space-y-2 text-sm text-ink-300">
-                    {o.items.map((item) => (
+                    {items.map((item) => (
                       <li key={item} className="flex gap-2">
                         <span className="mt-2 inline-block h-1 w-1 flex-none rounded-full bg-brand-400" />
                         <span>{item}</span>
@@ -306,15 +349,14 @@ export default function HomePage() {
         <div className="container-page">
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold text-ink-50">
-              Get In <span className="text-brand-400">Touch</span>
+              {tContact('heading')}{' '}
+              <span className="text-brand-400">{tContact('headingHighlight')}</span>
             </h2>
-            <p className="mt-3 text-ink-300">
-              Ready to transform your business with AI? Let&apos;s talk.
-            </p>
+            <p className="mt-3 text-ink-300">{tContact('subtitle')}</p>
           </div>
 
           <div className="mt-12 max-w-2xl mx-auto">
-            <ContactForm />
+            <ContactForm locale={locale as Locale} />
           </div>
         </div>
       </section>

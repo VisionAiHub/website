@@ -1,0 +1,349 @@
+{
+  "site": {
+    "tagline": "Innovative KI-Lösungen",
+    "legalTagline": "KI in echten Geschäftswert verwandeln",
+    "description": "Führendes KI-Beratungsunternehmen, spezialisiert auf intelligente, skalierbare Lösungen, die Unternehmen transformieren und branchenübergreifend Innovation vorantreiben."
+  },
+  "nav": {
+    "services": "Leistungen",
+    "about": "Über uns",
+    "offer": "Was wir bieten",
+    "contact": "Kontakt",
+    "cta": "Kontakt aufnehmen"
+  },
+  "hero": {
+    "eyebrow": "Innovative KI-Lösungen",
+    "titleHighlight": "Stärken Sie Ihr Team",
+    "titleRest": " mit KI-Agenten",
+    "subtitle": "Maßgeschneidert für Ihr Unternehmen",
+    "bodyBefore": "Wir entwickeln intelligente, skalierbare und maßgeschneiderte KI-Lösungen, die ",
+    "bodyHighlight": "Ihre Arbeit automatisieren und Datenschutz gewährleisten",
+    "bodyAfter": " – damit Sie in einer sich rasant verändernden Welt stets einen Schritt voraus sind.",
+    "primaryCta": "Kontakt aufnehmen",
+    "secondaryCta": "Leistungen entdecken",
+    "robotAlt": "KI-Agent Illustration"
+  },
+  "services": {
+    "eyebrow": "KI-Lösungen, die echten Mehrwert für Ihr Unternehmen schaffen",
+    "heading": "Ihr vertrauenswürdiger Partner für KI-Lösungen und Geschäftsautomatisierung",
+    "items": {
+      "enterprise-knowledge-assistants": {
+        "title": "Unternehmens-Wissensassistenten",
+        "summary": "Schneller Zugriff auf Unternehmenswissen – für Mitarbeitende und Kunden."
+      },
+      "information-extraction": {
+        "title": "Intelligente Informationsextraktion",
+        "summary": "Präzise Extraktion und Analyse kritischer Daten aus Verträgen, Belegen und Formularen."
+      },
+      "agent-automation": {
+        "title": "Agentenbasierte Geschäftsprozessautomatisierung",
+        "summary": "Durchgängige Automatisierung komplexer Prozesse durch autonome KI-Agenten."
+      },
+      "multi-modal-ai": {
+        "title": "Multimodale KI-Integration",
+        "summary": "Verknüpfung von Text, Bild, Sprache und Video für ganzheitliche KI-Erlebnisse."
+      },
+      "customer-support": {
+        "title": "KI-gestützter Kundensupport",
+        "summary": "Personalisierter 24/7-Support mit empathischen Chat- und Voice-Bots."
+      },
+      "privacy-compliant": {
+        "title": "Datenschutzkonforme KI-Lösungen",
+        "summary": "DSGVO-konforme KI-Anwendungen mit lokalem Hosting oder Private-Cloud-Optionen."
+      }
+    }
+  },
+  "ribbon": {
+    "eyebrow": "Nicht sicher, was passt?",
+    "titleStart": "Welche dieser Lösungen bringt ",
+    "titleHighlight": "Ihr Unternehmen voran?",
+    "body": "Buchen Sie ein kostenloses 30-Minuten-Gespräch. Keine Folien – nur ein Austausch über Ihre KI-Möglichkeiten mit dem höchsten ROI.",
+    "primaryCta": "Kontakt aufnehmen",
+    "secondaryCta": "Leistungen ansehen"
+  },
+  "about": {
+    "eyebrow": "Über uns",
+    "heading": "Über",
+    "headingHighlight": "VisionAiHub",
+    "p1": "VisionAiHub ist ein führendes KI-Beratungsunternehmen mit über sieben Jahren Erfahrung in der erfolgreichen Entwicklung und Implementierung skalierbarer KI-Lösungen. Unser Ziel ist es, Unternehmen einen effizienten und praxisnahen Zugang zu den Möglichkeiten moderner KI zu eröffnen – insbesondere zu intelligenten Assistenzsystemen.",
+    "p2": "Wir konzentrieren uns nicht auf Technologien, sondern auf messbare Ergebnisse und echten Geschäftswert. In den vergangenen sieben Jahren haben wir zahlreichen Unternehmen – vom Mittelstand bis zum globalen Konzern – geholfen, KI sinnvoll zu integrieren und nachhaltigen Mehrwert zu schaffen.",
+    "stats": {
+      "years": {
+        "value": "7+",
+        "label": "Jahre Erfahrung"
+      },
+      "projects": {
+        "value": "30+",
+        "label": "umgesetzte Projekte"
+      }
+    },
+    "mission": {
+      "eyebrow": "Unsere Mission",
+      "title": "Teams mit smarten KI-Assistenten stärken und Ihre Prozesse auf das nächste Level heben.",
+      "body": "Wir sind überzeugt: KI sollte für jedes Unternehmen zugänglich, praxistauglich und transformativ sein – unabhängig von Größe oder Branche."
+    }
+  },
+  "why": {
+    "heading": "Warum",
+    "headingHighlight": "VisionAiHub?",
+    "items": {
+      "tailored": {
+        "title": "Maßgeschneiderte KI-Lösungen",
+        "description": "Individuelle KI-Systeme, abgestimmt auf Ihre spezifischen Geschäftsanforderungen"
+      },
+      "integration": {
+        "title": "Nahtlose Systemintegration",
+        "description": "Reibungslose Integration in bestehende IT-Infrastruktur und Workflows"
+      },
+      "expertise": {
+        "title": "Technisches & strategisches Know-how",
+        "description": "Expertenteam mit fundierter Kompetenz in KI und Geschäftsstrategie"
+      },
+      "compliance": {
+        "title": "DSGVO- & EU-AI-Act-konform",
+        "description": "Vollständige Einhaltung europäischer Datenschutz- und KI-Vorgaben"
+      },
+      "kpis": {
+        "title": "Transparente KPIs & Ergebnisse",
+        "description": "Messbarer Erfolg durch klare Kennzahlen und regelmäßiges Reporting"
+      },
+      "agile": {
+        "title": "Agile Umsetzung & schnelle Entwicklung",
+        "description": "Effiziente Projektabwicklung mit flexiblen Entwicklungsmethoden"
+      }
+    }
+  },
+  "industries": {
+    "heading": "Branchen, die wir betreut haben",
+    "items": {
+      "it": "IT",
+      "legal-compliance": "Recht & Compliance",
+      "finance": "Finanzwesen",
+      "marketing": "Marketing & Kommunikation",
+      "logistics": "Logistik",
+      "manufacturing": "Fertigung",
+      "ecommerce": "E-Commerce"
+    }
+  },
+  "tools": {
+    "heading": "Unsere Tools"
+  },
+  "offer": {
+    "eyebrow": "End-to-End-KI-Lösungsentwicklung",
+    "heading": "Was wir",
+    "headingHighlight": "bieten",
+    "items": {
+      "strategy": {
+        "title": "Strategische Beratung",
+        "list": [
+          "Strategische KI-Beratung",
+          "Erstellung individueller KI-Roadmaps",
+          "Auswahl passender Technologien"
+        ]
+      },
+      "data": {
+        "title": "Daten- & Modellinfrastruktur",
+        "list": [
+          "Data Engineering",
+          "Modellauswahl",
+          "Prompt Engineering",
+          "Wissensaufnahme",
+          "Agentenarchitektur"
+        ]
+      },
+      "dev": {
+        "title": "Entwicklung & Integration",
+        "list": [
+          "On-Premises-Bereitstellung",
+          "Private/Public-Cloud-Infrastruktur",
+          "Frontend- und Backend-Entwicklung",
+          "Mobile-App-Entwicklung",
+          "DevOps & Infrastruktur"
+        ]
+      },
+      "ops": {
+        "title": "Betrieb & Support",
+        "list": [
+          "Monitoring & Logging",
+          "Feedback-Schleifen",
+          "Updates & Wartung"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "heading": "Nehmen Sie",
+    "headingHighlight": "Kontakt auf",
+    "subtitle": "Bereit, Ihr Unternehmen mit KI zu transformieren? Sprechen wir.",
+    "formTitle": "Senden Sie uns eine Nachricht",
+    "formSubtitle": "Erzählen Sie uns von Ihrem Projekt – wir melden uns zeitnah bei Ihnen",
+    "fields": {
+      "name": "Ihr Name",
+      "email": "E-Mail",
+      "company": "Unternehmen",
+      "message": "Erzählen Sie uns von Ihrem Projekt"
+    },
+    "submit": "Senden",
+    "submitting": "Wird gesendet …",
+    "successTitle": "Vielen Dank – Nachricht erhalten.",
+    "successBody": "Wir melden uns unter der angegebenen E-Mail-Adresse bei Ihnen, in der Regel innerhalb eines Werktags.",
+    "errors": {
+      "missingFields": "Bitte füllen Sie Name, E-Mail und Nachricht aus.",
+      "invalidEmail": "Diese E-Mail-Adresse erscheint ungültig.",
+      "tooLong": "Die Nachricht ist zu lang (max. 5000 Zeichen).",
+      "notConfigured": "Der Server ist noch nicht für den E-Mail-Versand konfiguriert.",
+      "sendFailed": "Senden fehlgeschlagen. Bitte schreiben Sie uns direkt eine E-Mail."
+    },
+    "email": {
+      "subject": "Neue Anfrage von {name}",
+      "subjectWithCompany": "Neue Anfrage von {name} ({company})",
+      "heading": "Neue Anfrage von visionaihub.com",
+      "name": "Name",
+      "emailLabel": "E-Mail",
+      "company": "Unternehmen"
+    }
+  },
+  "floatingCta": "Kontakt aufnehmen",
+  "blog": {
+    "title": "Blog",
+    "description": "Einblicke von VisionAiHub zu generativer KI, Agenten und angewandtem ML.",
+    "eyebrow": "Blog",
+    "heading": "Einblicke & Beiträge",
+    "subtitle": "Praxisorientierte Perspektiven zum produktiven Einsatz von KI.",
+    "empty": "Noch keine Beiträge – schauen Sie bald wieder vorbei."
+  },
+  "footer": {
+    "aboutHeading": "Über uns",
+    "rights": "Alle Rechte vorbehalten.",
+    "privacy": "Datenschutz",
+    "legal": "Impressum",
+    "linkedin": "LinkedIn"
+  },
+  "languageSwitcher": {
+    "label": "Sprache",
+    "de": "Deutsch",
+    "en": "English"
+  },
+  "notFound": {
+    "eyebrow": "404",
+    "title": "Seite nicht gefunden",
+    "body": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "back": "Zurück zur Startseite"
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "intro": "Verantwortlich im Sinne der Datenschutz-Grundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze der Mitgliedstaaten sowie sonstiger datenschutzrechtlicher Bestimmungen ist:",
+    "controller": {
+      "name": "VisionAiHub GmbH",
+      "address": "Mergenthalerallee 73-75, 65760 Eschborn",
+      "managingDirector": "Vertreten durch den Geschäftsführer: Yash Shah",
+      "registry": "Eingetragen: Amtsgericht Frankfurt am Main, HRB 141831",
+      "vat": "USt-IdNr.: DE460919226",
+      "phone": "Telefon: +49-17687991987",
+      "emailLabel": "E-Mail:"
+    },
+    "sections": {
+      "website": {
+        "heading": "a) Beim Besuch der Website",
+        "intro": "Wenn Sie meine Website besuchen, sendet der auf Ihrem Endgerät verwendete Browser automatisch Informationen an den Server meiner Website. Diese Informationen werden temporär in einer sogenannten Logdatei gespeichert. Folgende Daten werden ohne Ihr Zutun erfasst und bis zur automatisierten Löschung gespeichert:",
+        "items": [
+          "IP-Adresse des anfragenden Rechners,",
+          "Datum und Uhrzeit des Zugriffs,",
+          "Name und URL der abgerufenen Datei,",
+          "Website, von der aus der Zugriff erfolgt (Referrer-URL),",
+          "Verwendeter Browser sowie ggf. das Betriebssystem Ihres Rechners und der Name Ihres Zugangsproviders."
+        ],
+        "purposeLabel": "Zweck:",
+        "purpose": "Diese Daten werden zu folgenden Zwecken erhoben: Gewährleistung eines reibungslosen Verbindungsaufbaus der Website, Sicherstellung einer komfortablen Nutzung unserer Website, Auswertung der Systemsicherheit und -stabilität sowie zu weiteren administrativen Zwecken."
+      },
+      "form": {
+        "heading": "b) Bei Nutzung eines Kontaktformulars",
+        "intro": "Wenn Sie ein Kontaktformular nutzen, um mit mir Kontakt aufzunehmen, erhebe ich folgende personenbezogene Daten:",
+        "items": [
+          "Name, E-Mail-Adresse und weitere Kontaktdaten"
+        ],
+        "purposeLabel": "Zweck:",
+        "purpose": "Diese Datenerhebung ist erforderlich, um Ihre Fragen zu beantworten und Ihre Anfragen zu bearbeiten."
+      },
+      "cookies": {
+        "heading": "c) Cookies",
+        "intro": "Diese Website verwendet möglicherweise Cookies. Cookies sind kleine Dateien, die Ihr Browser automatisch erstellt und auf Ihrem Endgerät (Laptop, Tablet, Smartphone usw.) speichert, wenn Sie unsere Seite besuchen. Sie verursachen keine Schäden an Ihrem Endgerät und enthalten keine Viren, Trojaner oder sonstige Schadsoftware.",
+        "purposeLabel": "Zweck:",
+        "purpose": "Der Einsatz von Cookies dient dazu, die Nutzung meiner Dienste für Sie angenehmer zu gestalten. Einige Cookies sind erforderlich, um grundlegende Funktionen der Website auszuführen, andere können zu statistischen oder Marketingzwecken eingesetzt werden.",
+        "analyticsLabel": "Google Analytics:",
+        "analytics": "Diese Website nutzt möglicherweise Google Analytics, einen Webanalysedienst der Google Inc. Google Analytics verwendet Cookies. Weitere Details finden Sie in der Datenschutzerklärung von Google."
+      },
+      "sharing": {
+        "heading": "Weitergabe von Daten",
+        "intro": "Ihre personenbezogenen Daten werden nicht zu anderen als den oben genannten Zwecken an Dritte weitergegeben, es sei denn:",
+        "items": [
+          "Sie haben Ihre ausdrückliche Einwilligung erteilt,",
+          "die Weitergabe ist zur Erfüllung eines Vertrags erforderlich,",
+          "die Weitergabe ist gesetzlich vorgeschrieben,",
+          "die Weitergabe ist zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich und es besteht kein Anlass zur Annahme, dass Sie ein überwiegendes schutzwürdiges Interesse an der Nichtweitergabe Ihrer Daten haben."
+        ]
+      },
+      "rights": {
+        "heading": "Ihre Rechte",
+        "intro": "Nach der DSGVO haben Sie folgende Rechte hinsichtlich Ihrer personenbezogenen Daten:",
+        "items": [
+          { "label": "Recht auf Auskunft:", "body": "Bestätigung darüber zu erhalten, ob Ihre Daten verarbeitet werden, und gegebenenfalls weitere Details zu erhalten." },
+          { "label": "Recht auf Berichtigung:", "body": "Korrektur unrichtiger oder unvollständiger personenbezogener Daten zu verlangen." },
+          { "label": "Recht auf Löschung:", "body": "Die Löschung Ihrer personenbezogenen Daten zu verlangen, sofern die Verarbeitung nicht gesetzlich vorgeschrieben ist." },
+          { "label": "Recht auf Einschränkung der Verarbeitung:", "body": "Die Einschränkung der Verarbeitung zu verlangen, wenn Sie die Richtigkeit der Daten bestreiten." },
+          { "label": "Recht auf Datenübertragbarkeit:", "body": "Die von Ihnen bereitgestellten personenbezogenen Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten." },
+          { "label": "Recht auf Widerruf der Einwilligung:", "body": "Ihre Einwilligung jederzeit zu widerrufen." }
+        ],
+        "complaint": "Wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt, haben Sie das Recht, sich bei einer Aufsichtsbehörde zu beschweren."
+      },
+      "security": {
+        "heading": "Datensicherheit",
+        "body": "Ich setze geeignete technische und organisatorische Sicherheitsmaßnahmen ein, um Ihre Daten vor zufälliger oder vorsätzlicher Manipulation, teilweisem oder vollständigem Verlust, Zerstörung oder unbefugtem Zugriff Dritter zu schützen. Meine Sicherheitsmaßnahmen werden im Einklang mit der technologischen Entwicklung kontinuierlich verbessert."
+      },
+      "updates": {
+        "heading": "Aktualisierungen dieser Erklärung",
+        "body": "Ich kann diese Datenschutzerklärung anpassen, um Änderungen rechtlicher Anforderungen oder meiner Dienste abzubilden. Die jeweils aktuelle Fassung ist auf dieser Website verfügbar."
+      }
+    }
+  },
+  "impressum": {
+    "title": "Impressum",
+    "intro": "Diensteanbieter im Sinne von § 5 TMG:",
+    "company": {
+      "name": "VisionAiHub GmbH",
+      "street": "Mergenthalerallee 73-75",
+      "city": "65760 Eschborn",
+      "country": "Deutschland"
+    },
+    "contact": {
+      "heading": "Kontakt",
+      "phone": "Telefon: +49-17687991987",
+      "emailLabel": "E-Mail:",
+      "websiteLabel": "Website:"
+    },
+    "representative": {
+      "heading": "Vertretungsberechtigter Geschäftsführer",
+      "name": "Yash Shah"
+    },
+    "registry": {
+      "heading": "Registereintrag",
+      "registered": "Eingetragen im Handelsregister",
+      "court": "Registergericht: Amtsgericht Frankfurt am Main",
+      "number": "Registernummer: HRB 141831"
+    },
+    "vat": {
+      "heading": "Umsatzsteuer-ID",
+      "body": "Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: DE460919226"
+    },
+    "responsible": {
+      "heading": "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV",
+      "name": "Yash Shah",
+      "address": "Mergenthalerallee 73-75, 65760 Eschborn"
+    }
+  },
+  "metadata": {
+    "title": "VisionAiHub — Innovative KI-Lösungen",
+    "description": "Führendes KI-Beratungsunternehmen, spezialisiert auf intelligente, skalierbare Lösungen, die Unternehmen transformieren und branchenübergreifend Innovation vorantreiben.",
+    "ogTitle": "VisionAiHub — Innovative KI-Lösungen"
+  }
+}

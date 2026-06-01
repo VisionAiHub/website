@@ -1,18 +1,23 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { setRequestLocale } from 'next-intl/server';
 import { getPostSlugs } from '@/lib/blog';
+import { routing, type Locale } from '@/i18n/routing';
 import matter from 'gray-matter';
 import fs from 'node:fs';
 import path from 'node:path';
 
 export async function generateStaticParams() {
-  return getPostSlugs().map((slug) => ({ slug }));
+  const slugs = getPostSlugs();
+  return routing.locales.flatMap((locale) =>
+    slugs.map((slug) => ({ locale, slug })),
+  );
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
   const file = path.join(process.cwd(), 'content', 'blog', `${slug}.mdx`);
@@ -27,9 +32,10 @@ export async function generateMetadata({
 export default async function BlogPostPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+  setRequestLocale(locale as Locale);
   const file = path.join(process.cwd(), 'content', 'blog', `${slug}.mdx`);
   if (!fs.existsSync(file)) notFound();
 

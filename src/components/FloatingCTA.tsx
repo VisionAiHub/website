@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import { Calendar } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export function FloatingCTA() {
   const [visible, setVisible] = useState(false);
+  const t = useTranslations();
 
   useEffect(() => {
     const update = () => {
@@ -34,7 +36,7 @@ export function FloatingCTA() {
       }`}
     >
       <Calendar className="h-4 w-4" />
-      Get in touch
+      {t('floatingCta')}
     </a>
   );
 }

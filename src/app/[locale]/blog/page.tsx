@@ -1,31 +1,47 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getAllPosts } from '@/lib/blog';
+import { Link } from '@/i18n/navigation';
+import { routing, type Locale } from '@/i18n/routing';
 
-export const metadata: Metadata = {
-  title: 'Blog',
-  description: 'Insights from VisionAiHub on Generative AI, agents, and applied ML.',
-};
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
-export default function BlogIndexPage() {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'blog' });
+  return { title: t('title'), description: t('description') };
+}
+
+export default async function BlogIndexPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale as Locale);
+  const t = await getTranslations('blog');
   const posts = getAllPosts();
 
   return (
     <>
       <section className="bg-ink-950">
         <div className="container-page py-20">
-          <p className="eyebrow">Blog</p>
-          <h1 className="mt-3 text-4xl lg:text-5xl font-bold text-ink-50">Insights & writing</h1>
-          <p className="mt-4 max-w-2xl text-ink-300">
-            Practical perspectives on shipping AI in production.
-          </p>
+          <p className="eyebrow">{t('eyebrow')}</p>
+          <h1 className="mt-3 text-4xl lg:text-5xl font-bold text-ink-50">{t('heading')}</h1>
+          <p className="mt-4 max-w-2xl text-ink-300">{t('subtitle')}</p>
         </div>
       </section>
 
       <section className="section bg-ink-900">
         <div className="container-page">
           {posts.length === 0 ? (
-            <p className="text-ink-300">No posts yet — check back soon.</p>
+            <p className="text-ink-300">{t('empty')}</p>
           ) : (
             <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {posts.map((p) => (
