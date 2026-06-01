@@ -79,7 +79,7 @@
     },
     "mission": {
       "eyebrow": "Unsere Mission",
-      "title": "Teams mit smarten KI-Assistenten stärken und Ihre Prozesse auf das nächste Level heben.",
+      "title": "Teams mit intelligenten KI-Assistenten stärken und Ihre Prozesse auf das nächste Level heben.",
       "body": "Wir sind überzeugt: KI sollte für jedes Unternehmen zugänglich, praxistauglich und transformativ sein – unabhängig von Größe oder Branche."
     }
   },
@@ -185,7 +185,7 @@
     },
     "submit": "Senden",
     "submitting": "Wird gesendet …",
-    "successTitle": "Vielen Dank – Nachricht erhalten.",
+    "successTitle": "Vielen Dank – wir haben Ihre Nachricht erhalten.",
     "successBody": "Wir melden uns unter der angegebenen E-Mail-Adresse bei Ihnen, in der Regel innerhalb eines Werktags.",
     "errors": {
       "missingFields": "Bitte füllen Sie Name, E-Mail und Nachricht aus.",
